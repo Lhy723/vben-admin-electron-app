@@ -1,0 +1,36 @@
+{
+  "appId": "com.vben.admin.electron",
+  "productName": "Vben Admin Electron",
+  "asar": true,
+  "directories": {
+    "output": "dist-electron"
+  },
+  "files": ["electron/main.js", "electron/preload.js", "apps/web-ele/dist"],
+  "mac": {
+    "category": "public.app-category.developer-tools",
+    "target": ["dmg", "zip"]
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false
+  },
+  "linux": {
+    "target": ["AppImage", "deb", "rpm"],
+    "category": "Development"
+  }
+}
