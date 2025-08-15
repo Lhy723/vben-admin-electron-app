@@ -80,7 +80,7 @@
     "autoprefixer": "catalog:",
     "cross-env": "catalog:",
     "cspell": "catalog:",
-    "electron": "^37.2.5",
+    "electron": "^37.3.0",
     "electron-builder": "^26.0.12",
     "happy-dom": "catalog:",
     "husky": "catalog:",
